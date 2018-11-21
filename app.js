@@ -4,8 +4,6 @@ var router = express.Router();
 var swig = require('swig');
 
 
-
-
 app.set('view cache', false);
 app.set('views','./views');
 app.set('view engine','html');
