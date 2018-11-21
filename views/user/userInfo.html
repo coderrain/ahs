@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+姓名：{{ userInfo.username }} <br>
+性别：{% if userInfo.sex == 1 %}
+男
+{% else %}
+女
+{% endif %} <br>
+密码：{{ userInfo.password }}
+</body>
+</html>

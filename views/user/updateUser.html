@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/user/updateUser" method="post">
+    姓名：<input type="text" value="{{ userInfo.username }}" name="username"> <br>
+    性别：
+    {% if userInfo.sex == 1 %}
+    <input type="radio" name="sex" value="1" checked>男
+    <input type="radio" name="sex" value="2">女
+    {% else %}
+    <input type="radio" name="sex" value="1">男
+    <input type="radio" name="sex" value="2" checked>女
+    {% endif %} <br>
+    密码：<input type="password" name="password" value="{{ userInfo.password }}">
+    <input type="submit" value="修改密码">
+</form>
+</body>
+</html>
