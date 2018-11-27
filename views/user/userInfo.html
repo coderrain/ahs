@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
+<div class="common-header-1">
+    <div class="dw">
+        <span><a href="">服务条款</a></span>
+        <span><a href="">关于我们</a></span>
+        <span><a href="/user/userinfo">用户中心</a></span>
+        {% if userInfo.username %}
+        <div class="denglu">欢迎您{{ userInfo.username }}</div>
+        {% else %}
+        <span><a href="/user/reg">注册</a></span>
+        <span><a href="/user/login"  class="fontY">登录</a></span>
+        {% endif %}
+    </div>
+    <div class="banner">
+    </div>
+
+</div>
+<div class="common-header-1 w1200">
+    <div class="dw">
+        <span><a href="">服务条款</a></span>
+        <span><a href="">关于我们</a></span>
+        <span><a href="/user/userinfo">用户中心</a></span>
+        {% if userInfo.username %}
+        <div class="denglu">欢迎您{{ userInfo.username }}</div>
+        {% else %}
+        <span><a href="/user/reg">注册</a></span>
+        <span><a href="/user/login"  class="fontY">登录</a></span>
+        {% endif %}
+    </div>
+</div>
 姓名：{{ userInfo.username }} <br>
 性别：{% if userInfo.sex == 1 %}
 男
