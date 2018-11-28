@@ -2,11 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
+<style>
+    .w1200{
+        /*background-color: white;*/
+    }
+    .jieguo{
+        background-color: #F3F4F7;
+        panding:10px 30px;
+        margin-bottom: 30px;
+        line-height: 20px;
+
+    }
+    .jieguo h4{
+        font-size: 16px;
+        color: blue;
+        line-height: 30px;
+    }
+</style>
 <body>
-{% for item in nowNews %}
-<p>{{item.title}}</p>
-{% endfor %}
+<div class="common-header-1">
+    <div class="dw">
+        <span><a href="">服务条款</a></span>
+        <span><a href="">关于我们</a></span>
+        <span><a href="/user/userinfo">用户中心</a></span>
+        {% if userInfo.username %}
+        <div class="denglu">欢迎您{{ userInfo.username }}</div>
+        {% else %}
+        <span><a href="/user/reg">注册</a></span>
+        <span><a href="/user/login"  class="fontY">登录</a></span>
+        {% endif %}
+    </div>
+    <div class="banner">
+    </div>
+
+</div>
+<div class="w1200">
+    {% for item in nowNews %}
+    <!--{% if nowNews %}-->
+    <div class="jieguo">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.content }}</p>
+    </div>
+<!--    {% else %}
+    {% endif %}-->
+    {% endfor %}
+</div>
 </body>
 </html>

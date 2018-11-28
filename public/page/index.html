@@ -1,19 +1,462 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
+
+    <link rel="stylesheet" href="/static/css/swiper.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
-<div class="head">
-    <div style="display: none;">
-        <a href="javascript:;">rain</a>
-        <a href="/userinfo">用户中心</a>
+<!--头部-->
+<div class="common-header-1">
+    <div class="dw">
+        <span><a href="">服务条款</a></span>
+        <span><a href="">关于我们</a></span>
+        <span><a href="">用户中心</a></span>
+        <span><a href="">注册</a></span>
+        <span><a href=""  class="fontY">登录</a></span>
     </div>
-    <div>
-        <a href="/login">登录</a>
-        <a href="/reg">注册</a>
+    <!--搜索框-->
+    <div class="banner">
+        <div class="search">
+            <form action="get">
+                <input type="text" name="search" placeholder="请输入要搜索的机型">
+                <button class="search-btn"></button>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<!--旧机回收-->
+<div class="content-title w1200">
+    <ul>
+        <li class="first active"><a href="">旧机回收</a></li>
+        <li><a href="">二手优品</a></li>
+        <li><a href="">手机租赁</a></li>
+    </ul>
+    <span class="fr">手机回收宝<img src="/static/img/erweima.png" alt=""></span>
+</div>
+<!--手机、 轮播图-->
+<div class="mobile-swiper">
+    <div class="content w1200">
+        <div class="left">
+            <div class="form1">
+                <h3 class="h40 mobile"><span class="lf"></span>手机 <span class="ri"></span></h3>
+                <ul>
+                    <li class="h40"><span>热门</span><span class="ri"></span></li>
+                    <li class="h40"><span>华为</span><span class="ri"></span></li>
+                    <li class="h40"><span>荣耀</span><span class="ri"></span></li>
+                    <li class="h40"><span>苹果</span><span class="ri"></span></li>
+                    <li class="h40"><span>小米</span><span class="ri"></span></li>
+                    <li class="h40"><span>OPPO</span><span class="ri"></span></li>
+                    <li class="h40"><span><a href="">查看更多品牌</a></span><span class="ri"></span></li>
+                </ul>
+            </div>
+            <h3 class="h40 bijiben">笔记本 <span class="ri"></span></h3>
+            <h3 class="h40 paid"><span class="lf"></span>平板<span class="ri"></span></h3>
+        </div>
+        <div class="right">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="//s1.huishoubao.com/banner/image/4f64c36de18dcfbcb20fc8da59753fa1_24.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/static/img/b01.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
     </div>
 </div>
+<!--流程-->
+<ul class="w1200 liucheng">
+    <li class="first"><img src="/static/img/liucheng01.png" alt=""><i></i><i></i><i></i><i></i><i></i><i></i><h4>1、往返包邮，合作顺丰</h4></li>
+    <li><img src="/static/img/liucheng02.png" alt=""><i></i><i></i><i></i><i></i><i></i><i></i><h4>2、当日验机，行业前列</h4></li>
+    <li><img src="/static/img/liucheng03.png" alt=""><i></i><i></i><i></i><i></i><i></i><i></i><h4>3、极速收款，即刻回血</h4></li>
+    <li class="last"><img src="/static/img/liucheng04.png" alt=""><h4>4、数据清除，隐私安全</h4></li>
+</ul>
+<!--设备回收-->
+<div class="shebei-container">
+    <div class="w1200">
+        <div class="shebei-title">
+            <h3>设备回收</h3>
+            <ul>
+                <li class="active">手机</li>
+                <li>笔记本</li>
+                <li>平板</li>
+            </ul>
+        </div>
+        <div class="shebei-content">
+            <ul class="left">
+                <li><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li><img src="/static/img/huawei02.png" alt=""></li>
+                <li><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li><img src="/static/img/huawei02.png" alt=""></li>
+                <li><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li><img src="/static/img/huawei02.png" alt=""></li>
+                <li><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li><img src="/static/img/huawei02.png" alt=""></li>
+                <li><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li><img src="/static/img/huawei02.png" alt=""></li>
+                <li class="no-bd"><img src="/static/img/shebei01.png" alt=""><span></span></li>
+                <li class="no-bd"><img src="/static/img/huawei02.png" alt=""></li>
+            </ul>
+            <ul class="right">
+                <li><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                    </a>
+                </li>
+                <li><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a>
+                </li>
+                <li><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a>
+                </li>
+                <li><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a>
+                </li>
+                <li class="second"><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a></li>
+                <li class="second"><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a></li>
+                <li class="second"><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a></li>
+                <li class="second"><a href=""><img src="/static/img/iphone6.png" alt="">
+                    <h5>iPhone 6</h5>
+                    <p>最高回收价</p>
+                    <div class="price">￥895</div>
+                </a></li>
+            </ul>
+            <a class="showmore" href=""><span>更多</span></a>
+        </div>
+    </div>
+</div>
+<!--粉丝眼中的回收宝-->
+<div class="fensi">
+    <div class="w1200">
+        <h3>粉丝眼中的回收宝</h3>
+        <span></span>
+        <p class="miaoshu">回收宝4年，900万+用户选择了回收宝，850万用户好评</p>
+    </div>
+    <!--swiper-->
+    <div class="swiper-container2" style="height: 422px">
+        <div class="swiper-wrapper w1200">
+            <div class="swiper-slide">
+                <img src="/static/img/12_03.png" alt="">
+                <p class="content">有这样专业且方便的回收机构简直太棒了，不然不用的机器都不知道怎么处理，卖给个人又有风险，现在完全没顾虑啦，棒棒哒！</p>
+                <div class="bot">
+                    <img src="/static/img/touxiang01.jpg" alt="">
+                    <div class="username">188****6666</div>
+                    <div class="aa">在武汉，回收了两台平板</div>
+                    <div>2018-11-18</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="/static/img/12_03.png" alt="">
+                <p class="content">卖掉了自己用很久的手机，虽然摔烂了，还是换成了钱。哈哈，非常不错的体验，感谢！</p>
+                <div class="bot">
+                    <img src="/static/img/touxiang02.jpg" alt="">
+                    <div class="username">188****6666</div>
+                    <div class="aa">在武汉，回收了两台平板</div>
+                    <div>2018-11-18</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="/static/img/12_03.png" alt="">
+                <p class="content">第一次在网上卖手机，开始很害怕是骗局，害怕手机寄过去但钱没回来，但本次回收体验有惊喜：网上寄回由商家到付，付款及时，服务规范且专业！！！一定再来！！会推荐身边的朋友使用“回收宝”的</p>
+                <div class="bot">
+                    <img src="/static/img/touxiang03.jpg" alt="">
+                    <div class="username">188****6666</div>
+                    <div class="aa">在武汉，回收了两台平板</div>
+                    <div>2018-11-18</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="/static/img/12_03.png" alt="">
+                <p class="content">这样的回收站，挺好的，挺环保，又让我们的旧手机还能赚到，何乐不为呢。</p>
+                <div class="bot">
+                    <img src="/static/img/touxiang04.jpg" alt="">
+                    <div class="username">188****6666</div>
+                    <div class="aa">在武汉，回收了两台平板</div>
+                    <div>2018-11-18</div>
+                </div>
+            </div>
+           <!-- <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>-->
+        </div>
+        <!--前进后退按钮-->
+        <div class="swiper-button-prev"></div><!--左箭头-->
+        <div class="swiper-button-next"></div><!--右箭头-->
+    </div>
+
+</div>
+<!--一流的回收体验-->
+<div class="fensi">
+    <div class="w1200">
+        <h3>一流的回收体验</h3>
+        <span></span>
+        <p class="miaoshu">规范高效的回收流程，专业工程师为你把关</p>
+    </div>
+</div>
+<div class="jcgcs w1200">
+   <div class="left">
+       <h4>检测工程师</h4>
+       <p>回收宝的检测工程师团队，不仅有着丰富的从业与检测经验，同时还提供方便快捷的上门服务，深圳北京地区的用户可足不出户等收钱</p>
+       <div class="kong"></div>
+       <strong>专业、便捷、高效 </strong>
+   </div>
+    <div class="right">
+        <div class="video"></div>
+        <div class="play"></div>
+    </div>
+</div>
+
+<!--专业检测-->
+<div class="fensi zhuanye">
+    <div class="w1200">
+        <h3>专业检测，保障隐私</h3>
+        <span></span>
+        <p class="miaoshu">资深检测工程师，保证检测结果的公正性；先进的数据填充技术，保障用户隐私安全</p>
+    </div>
+    <div class="shuju w1200">
+        <h4>数据安全</h4>
+        <p>回收宝采用专业数据清理工具，通过数据填充覆盖技术，反复清除手机数据，保护您的隐私安全。</p>
+    </div>
+    <div class="bot">
+        <h4>专业检测</h4>
+        <p>回收宝开创手机回收新标准。规范的流水作业操作，由从业5年以上的检测工程师对手机检测，保证检测结果的客观公正；</p>
+    </div>
+</div>
+<!--四年成绩-->
+<div class="sinian fensi w1200">
+    <div class="w1200">
+        <h3>回收宝4年的成绩</h3>
+        <span></span>
+        <p class="miaoshu">900万用户选择回收宝；回收了1000万台手机；支出回收款项60亿</p>
+        <ul class="chengji">
+            <li>
+                <img src="/static/img/2_03.png" alt="">
+                <h4>900万+用户</h4>
+                <p>选择我们的用户数</p>
+            </li>
+            <li>
+            <img src="/static/img/2_05.png" alt="">
+            <h4>1000万+台</h4>
+            <p>回收手机数</p>
+            </li>
+            <li>
+            <img src="/static/img/2_07.png" alt="">
+            <h4>60+亿</h4>
+            <p>回收手机总价值（亿）</p>
+            </li>
+            <li>
+                <img src="/static/img/2_09.png" alt="">
+                <h4>42个西湖</h4>
+                <p>保护的无污染水资源量</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--媒体报道-->
+<div class="fensi meiti">
+    <div class="w1200">
+        <h3>媒体报道</h3>
+        <span></span>
+        <p class="miaoshu">为用户创造价值，为环保公益助力</p>
+        <ul class="left">
+            <li>
+                <a href="">
+                    <h4>回收宝获阿里巴巴C1轮战略投资，二手回收“强者恒强”格局已定</h4>
+                    <p>
+                        近日，深圳回收宝科技有限公司完成C1轮融资，本轮战略投资方为阿里巴巴集团。据悉，此前双方已经就闲鱼信用回收、闲鱼优品、天猫淘宝以旧换新、阿里公益等多个领域达成深度合作。本次融资后，回收宝将携手闲鱼共同加速闲鱼开放平台的布局。回收宝还将进一步拓展线下业务，拓宽用户精准触达场景;完成二手回收的线上线下业态融合;并进一步奠定从产品到服务的各项标准。</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h4>回收宝获阿里巴巴C1轮战略投资，二手回收“强者恒强”格局已定</h4>
+                    <p>
+                        近日，深圳回收宝科技有限公司完成C1轮融资，本轮战略投资方为阿里巴巴集团。据悉，此前双方已经就闲鱼信用回收、闲鱼优品、天猫淘宝以旧换新、阿里公益等多个领域达成深度合作。本次融资后，回收宝将携手闲鱼共同加速闲鱼开放平台的布局。回收宝还将进一步拓展线下业务，拓宽用户精准触达场景;完成二手回收的线上线下业态融合;并进一步奠定从产品到服务的各项标准。</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h4>回收宝获阿里巴巴C1轮战略投资，二手回收“强者恒强”格局已定</h4>
+                    <p>
+                        近日，深圳回收宝科技有限公司完成C1轮融资，本轮战略投资方为阿里巴巴集团。据悉，此前双方已经就闲鱼信用回收、闲鱼优品、天猫淘宝以旧换新、阿里公益等多个领域达成深度合作。本次融资后，回收宝将携手闲鱼共同加速闲鱼开放平台的布局。回收宝还将进一步拓展线下业务，拓宽用户精准触达场景;完成二手回收的线上线下业态融合;并进一步奠定从产品到服务的各项标准。</p>
+                </a>
+            </li>
+        </ul>
+        <div class="right">
+            <h4>热门文章</h4>
+            <ul>
+                <li><a href=""><b class="black">1</b>回收宝开创手机回收新标准——手机检测可视化</a> </li>
+                <li><a href=""><b class="black">2</b>回收宝服务条款</a> </li>
+                <li><a href=""><b class="black">3</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>4</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>5</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>6</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>7</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>8</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>9</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+                <li><a href=""><b>10</b>关于我们 | 深圳回收宝科技有限公司 </a> </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--合作伙伴-->
+<div class="sinian fensi w1200">
+    <div class="w1200">
+        <h3>合作伙伴</h3>
+        <span></span>
+        <p class="miaoshu">与腾讯、华为等多家企业深度合作，值得信赖</p>
+    </div>
+    <ul class="hezuo">
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+        <li><img src="/static/img/tianmao.png" alt=""></li>
+        <li><img src="/static/img/weixin.png" alt=""></li>
+    </ul>
+</div>
+
+<div class="bottom">
+    <div class="w1200">
+        <ul>
+            <li><img src="/static/img/bottom01.png" alt="">专业</li>
+            <li><img src="/static/img/bottom01.png" alt="">专业</li>
+            <li><img src="/static/img/bottom01.png" alt="">专业</li>
+            <li><img src="/static/img/bottom01.png" alt="">专业</li>
+        </ul>
+    </div>
+</div>
+
+<div class="info">
+    <div class="w1200">
+        <div class="info01">
+            <ul>
+                <li class="li01"><img src="/static/img/1_15.png" alt="" class="img01"><img src="/static/img/14_03.png" alt=""></li>
+                <li>
+                    <h4>关于我们</h4>
+                    <p><a href="">关于回收宝</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">微博</a></p>
+                    <p><a href="">微信</a></p>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <p><a href="">关于回收宝</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">微博</a></p>
+                    <p><a href="">微信</a></p>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <p><a href="">关于回收宝</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">微博</a></p>
+                    <p><a href="">微信</a></p>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <p><a href="">关于回收宝</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">微博</a></p>
+                    <p><a href="">微信</a></p>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <p><a href="">关于回收宝</a></p>
+                    <p><a href="">联系我们</a></p>
+                    <p><a href="">微博</a></p>
+                    <p><a href="">微信</a></p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div><img src="/static/img/footer.png" alt="" style="width:100%"></div>
+</div>
+
+
+
+
+<script src="/static/js/swiper.min.js"></script>
+<!--轮播图-->
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', // 水平切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+            type:"bullets"
+        }
+
+        /*// 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },*/
+    })
+</script>
+<!--粉丝轮播图-->
+<script>
+    var mySwiper2 = new Swiper ('.swiper-container2', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: false, // 循环模式选项
+        slidesPerView : 4,
+        spaceBetween : 10,
+        /*前进后退*/
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    })
+</script>
 </body>
 </html>
