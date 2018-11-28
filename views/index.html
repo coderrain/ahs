@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/css/swiper.min.css" />
+    <script src="/static/js/swiper.min.js"></script>
 </head>
 <body>
 <!--{{ JSON.stringify(userInfo) }}-->
@@ -125,8 +127,14 @@
 
 <div class="common-banner">
     <div class="swiper-container-4 swiper-container">
-        <div class="swiper-wrapper" style="width: 4800px; height: 400px; transform: translate3d(-2400px, 0px, 0px); transition-duration: 0.3s;"><div class="swiper-slide swiper-slide-duplicate" data-html="" data-link="http://www.huishoubao.com/phone/?pid=1001" style="background: url(&quot;//s1.huishoubao.com/banner/image/7a8883b85bd02c526a5a255c4707ad71_24.jpg&quot;) center center; width: 1200px; height: 400px;"></div><div class="swiper-slide" data-html="" data-link="http://www.huishoubao.com/phone/?pid=1001" style="background: url(&quot;//s1.huishoubao.com/banner/image/dcf6413055c35e315ef6e7d124bd7e40_4%E5%91%A8%E5%B9%B4%E9%98%BF%E9%87%8C%E6%88%98%E7%95%A5%E8%9E%8D%E8%B5%84%E9%9D%9E%E6%B4%BB%E5%8A%A8banner%20.jpg&quot;) center center; width: 1200px; height: 400px;"></div><div class="swiper-slide swiper-slide-visible swiper-slide-active" data-html="" data-link="http://www.huishoubao.com/phone/?pid=1001" style="background: url(&quot;//s1.huishoubao.com/banner/image/7a8883b85bd02c526a5a255c4707ad71_24.jpg&quot;) center center; width: 1200px; height: 400px;"></div><div class="swiper-slide swiper-slide-duplicate" data-html="" data-link="http://www.huishoubao.com/phone/?pid=1001" style="background: url(&quot;//s1.huishoubao.com/banner/image/dcf6413055c35e315ef6e7d124bd7e40_4%E5%91%A8%E5%B9%B4%E9%98%BF%E9%87%8C%E6%88%98%E7%95%A5%E8%9E%8D%E8%B5%84%E9%9D%9E%E6%B4%BB%E5%8A%A8banner%20.jpg&quot;) center center; width: 1200px; height: 400px;"></div></div>
-        <div class="pagination"><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(/static/img/banner1.jpg) center center;width: 1200px;height: 400px;">
+            </div>
+            <div class="swiper-slide" style="background: url(/static/img/banner2.jpg) center center;width: 1200px;height: 400px;"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="pagination"></div>
+
     </div>
     <div class="cate dw">
         <div class="cate-menu">
@@ -1483,6 +1491,16 @@
         <a rel="nofollow" href="//www.cnzz.com/stat/website.php?web_id=1254005878" target="_blank" title="站长统计">站长统计</a>
     </div>
 </div>
+<script>
 
+
+    var swiper = new Swiper('.swiper-container-4', {
+        pagination: {
+            el: '.pagination',
+            bulletClass: 'swiper-pagination-switch',
+            bulletActiveClass: 'swiper-active-switch'
+        },
+    });
+</script>
 </body>
 </html>
