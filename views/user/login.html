@@ -22,7 +22,7 @@
     </div>
 
 </div>
-<form action="/user/login" method="post">
+<!--<form action="/user/login" method="post">-->
     <div>
         姓名： <input type="text" name="username" />
     </div>
@@ -30,6 +30,24 @@
         密码： <input type="password" name="password">
     </div>
     <input type="submit" value="登录">
-</form>
+<!--</form>-->
+<script src="/static/jquery-1.11.1.min.js"></script>
+<script>
+    $('[type=submit]').click(function(){
+        $.ajax({
+            url: '/user/login',
+            type: 'post',
+            data: {
+                username: $('[name=username]').val(),
+                password: $('[name=password]').val()
+            },
+            success: function(res) {
+                if(res.code == 1){
+                    window.location.href ="/";
+                }
+            }
+        })
+    })
+</script>
 </body>
 </html>

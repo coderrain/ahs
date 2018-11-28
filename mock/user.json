@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"username":"wxxxxxxxx","sex":"1","password":"123456"},{"username":"xxx","password":"xxx","sex":"2"}]
-=======
-[{"username":"乔丹","sex":"1","password":"123"}]
->>>>>>> a99d5330d0e9b6df189a5a9b4a198fbb83b7272d
+[{"username":"乔丹","sex":"1","password":"123"},{"username":"rain","password":"123456","sex":"1"}]

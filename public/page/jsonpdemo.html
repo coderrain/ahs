@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>
+    function abc(data) {
+        console.log(data)
+    }
+</script>-->
+<script src="../jquery-1.11.1.min.js"></script>
+<!--<script src="http://localhost:8086/jsonpDemo?callback=abc"></script>-->
+<script>
+/*
+    $.ajax({
+        url: 'http://localhost:8086/jsonpDemo',
+        type: 'get',
+        data: {},
+        dataType: 'jsonp',
+        success: function(data) {
+            console.log(data);
+        }
+    })
+*/
+
+
+
+
+    ajax({
+        url: 'http://localhost:8086/jsonpDemo',
+        success: function(data){
+            console.log(data)
+        }
+    })
+    function ajax(options) {
+            var scriptDom = document.createElement('script');
+            scriptDom.src = options.url + '?callback=abc';
+            var abc = function(data) {
+                options.success(data)
+            }
+
+            window.abc = abc;
+            document.body.appendChild(scriptDom)
+
+    }
+
+    /*
+    * 通过script(本身可以引入其他域的东西)引入接口在接口后面加了一个callback（回调函数）=函数名
+    * <script src="http://localhost:8086/jsonpDemo?callback=abc" />
+    *
+    * 后台然后接受到这个callback,在原有的技术上包了一层，相当于写了字符串的执行函数
+    *  //{code:1}
+    * res.send('abc({code:1})')
+    *
+    * 此时前端接受的这个接口返回的就是一个调用函数
+    * script文件里面是不是返回也一个执行函数 abc({code:1})
+    *
+    * 前端自动创建一个这样的函数success
+    *
+    * function abc(data){
+    *
+    * }
+    *
+    *
+    * */
+</script>
+<script>
+</script>
+</body>
+</html>
