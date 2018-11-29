@@ -58,8 +58,6 @@ router.post('/updateUser', function (req, res, next) {
 
 router.post('/login', function (req, res, next) {
     var body = req.body;
-    //body.username
-    //console.log(body);
     fs.readFile('./mock/user.json', function (err, data) {
         if(err){
             return err;
@@ -68,11 +66,18 @@ router.post('/login', function (req, res, next) {
         for(var i=0;i<userData.length;i++) {
             if(body.username === userData[i].username && body.password === userData[i].password) {
                 req.session.userInfo = userData[i];
-                return res.redirect('/');
+                //return res.redirect('/');
+                return res.json({
+                    code: 1,
+                    msg: '登录成功'
+                })
             }
         }
-
-        res.redirect('/user/login');
+        res.json({
+            code: 2,
+            msg: '登录成功'
+        })
+        //res.redirect('/user/login');
 
     })
 })
@@ -90,12 +95,20 @@ router.post('/reg', function (req, res, next) {
         data = JSON.parse(data.toString())
         for(var i=0;i<data.length;i++) {
             if(data[i]['username'] == body['username']){
-                return res.redirect('/user/reg');
+                //return res.redirect('/user/reg');
+                return res.json({
+                    code: 1,
+                    msg: '注册成功'
+                })
             }
         }
         data.push(body);
         fs.writeFile('./mock/user.json', JSON.stringify(data), function () {
-            return res.redirect('/user/login')
+            //return res.redirect('/user/login')
+            return  res.json({
+                code: 1,
+                msg: '注册成功'
+            })
         })
     })
 

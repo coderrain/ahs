@@ -44,3 +44,39 @@
 后台hi产生一个sessionid
 session 写入到内存中，在把sessionid写入到cookie传递给前端
 当你访问每个页面的时候都会从cookie里拿这个sessionid去和内存里面的作对比，如果一样就是一个用户
+
+
+
+## 跨域
+
+同源策略
+两个页面的协议，端口（如果有指定）和域名都相同，则两个页面具有相同的源
+
+http:www.baidu.com:8080/a/b
+
+http 协议
+www.baidu.com 域名
+8080端口
+
+www.baidu.com
+baidu.com
+
+baidu.com:80
+a.baidu.com
+
+b.baidu.com
+
+跨域
+ jsonp script引入然后加一个callback方法
+ script可以引入不同域名下文件
+ <script src="baidu.com/a.html?callback=abc>
+ 
+ abc({code:1,msg:'sucess'})
+ 
+ function abc(data) {
+    
+ }
+ 
+ cors 操作都在后台： 后台改变请求头
+ 
+

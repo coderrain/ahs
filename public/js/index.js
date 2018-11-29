@@ -17,7 +17,12 @@ for(var i = 0;i<ali.length;i++){
         ali[0].className = 'active';
     }
 }
-
+/*二维码显示*/
+$('#erweima1').mouseenter(function () {
+    $('.erweima2').addClass('active');
+}).mouseleave(function () {
+    $('.erweima2').removeClass('active');
+})
 /*手机tab切换*/
 var oMobile = document.getElementById('mobile');
 var aPinpai = oMobile.getElementsByTagName('li');
@@ -33,8 +38,24 @@ for(var y = 0;y<aPinpai.length;y++){
             aRu[j].className = 'sa'
         }
         this.className = 'h40 active';
-        console.log(this.index);
         aRu[this.index].className = 'sa active1';
+    }
+    //鼠标进入右边对应ul是不让他消失
+    /*for(var x=0;x<aRu.length;x++){
+        aRu[x].onmouseover = function () {
+            this.className = 'sa active1';
+        }
+        aRu[x].onmouseout = function () {
+            this.className = 'sa';
+        }
+    }*/
+    aRu[y].onmouseover = function () {
+        oRight.className = 'right active';
+        this.className = 'sa active1';
+    }
+    aRu[y].onmouseout = function () {
+        oRight.className = 'right';
+        this.className = 'sa';
     }
     aPinpai[y].onmouseout = function () {
         oRight.className = 'right';

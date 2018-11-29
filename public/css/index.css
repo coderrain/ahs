@@ -121,10 +121,32 @@ a:hover{
 .content-title span{
     margin-top: 4px;
     font-size: 14px;
+    position: relative;
 }
 .content-title span img{
     vertical-align: middle;
     padding-left: 10px;
+}
+.content-title span .erweima2{
+    padding-top: 8px;
+    width: 212px;
+    height: 112px;
+    background: white;
+    display: none;
+    position: absolute;
+    top:32px;
+    right: 0px;
+    z-index: 999;
+}
+.content-title span .active{
+    display: block;
+}
+.content-title span .erweima2 strong{
+    font-size: 14px;
+    display: inline-block;
+    width: 105px;
+    text-align: center;
+    padding-top: 5px;
 }
 /*手机 轮播图*/
 .mobile-swiper{
@@ -272,6 +294,7 @@ a:hover{
     top: 0;
     left: 0;
     z-index: 1;
+    overflow: hidden;
 }
 .swiper-container .swiper-slide img{
     width: 100%!important;
@@ -812,6 +835,58 @@ a:hover{
     z-index: 200;
     background-color: white;
 }
-.huiTop ul{
-    background-color: white;
+.huiTop li{
+    padding: 7px 0;
+    cursor: pointer;
+    border: 1px solid #e9ebed;
+}
+.huiTop li:hover{
+    border-color: #fabe00;
+}
+.huiTop .customer-service{
+    background: url("/static/img/logo-headset.png") no-repeat center 6px;
+    height: 60px;
+}
+.huiTop .customer-service p{
+    padding-top: 50px;
+}
+.customer-qrcode{
+    height: 56px;
+    background: url("/static/img/logo-smlq.jpg") no-repeat center;
+    background-size:  100%;
+    position: relative;
+}
+.qrcode-lxjq{
+    display: none;
+    width: 98px;
+    border: 1px solid #e9ebed;
+    padding-top: 100px;
+    position: absolute;
+    left: -108px;
+    top: -18px;
+    background: url("/static/img/logo-lxjq12.png") no-repeat white;
+    background-size: 100%;
+}
+.customer-qrcode .qrcode-lxjq:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    right: -16px;
+    top: 36px;
+    width: 0;
+    height: 0;
+    border: 8px solid #fff;
+    border-bottom-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+.customer-qrcode:hover .qrcode-lxjq {
+    display: block;
+}
+.to-top{
+    height: 42px;
+    background: url("/static/img/logo-top.png") no-repeat center 12px;
+}
+.to-top p{
+    padding-top: 28px;
 }

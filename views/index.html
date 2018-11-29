@@ -2,21 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>{{ title }}</title>
 
     <link rel="stylesheet" href="/static/css/swiper.min.css">
     <link rel="stylesheet" href="/static/css/index.css">
-    <script src="/static/js/index.js" defer></script>
+
 </head>
 <body>
 <!--头部-->
-<div class="common-header-1">
+<div class="common-header-1" id="top">
     <div class="dw">
         <span><a href="">服务条款</a></span>
         <span><a href="">关于我们</a></span>
         <span><a href="/user/userinfo">用户中心</a></span>
         {% if userInfo.username %}
-        <div class="denglu">欢迎您{{ userInfo.username }}</div>
+        <div class="denglu">欢迎您！{{ userInfo.username }}</div>
         {% else %}
         <span><a href="/user/reg">注册</a></span>
         <span><a href="/user/login"  class="fontY">登录</a></span>
@@ -34,6 +35,7 @@
         </div>
     </div>
 
+
 </div>
 <!--旧机回收-->
 <div class="content-title ">
@@ -43,7 +45,14 @@
             <li><a href="">二手优品</a></li>
             <li><a href="">手机租赁</a></li>
         </ul>
-        <span class="fr">手机回收宝<img src="/static/img/erweima.png" alt=""></span>
+        <span class="fr">手机回收宝
+            <img id="erweima1" src="/static/img/erweima.png" alt="">
+            <div class="erweima2">
+                <img src="/static/img/code.png" alt="">
+                <p><strong>回收宝APP</strong><strong>关注微信</strong></p>
+            </div>
+        </span>
+
     </div>
 </div>
 <!--手机、 轮播图-->
@@ -67,7 +76,14 @@
         </div>
         
         <div class="right" id="mright">
-            <ul class="sa active1">
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <ul></ul>
+            <!--<ul class="sa active1">
                 <li class="sd"><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
                 <li class="sd"><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
                 <li class="sd"><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
@@ -83,109 +99,8 @@
                 <li class="sd"><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
                 <li class="sd"><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
                 <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">华为</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">荣耀 R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">iPhone XR</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
-            <ul class="sa">
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/OPPOR9.png" alt="">OPPO R9</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/iphone6.png" alt="">iphone6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweip10.jpg" alt="">华为P10</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/huaweisf01.png" alt="">小米6</a><span>估价</span></li>
-                <li><a href=""><img src="/static/img/vivo_X7.jpg" alt="">vivo X7</a><span>估价</span></li>
-                <a class="show-more" href="/phone">更多&gt;</a>
-            </ul>
+            </ul>-->
+
         </div>
     </div>
     <!--轮播图-->
@@ -741,12 +656,13 @@
         <p>客服</p>
     </li>
     <li class="customer-qrcode">
-        <div class="qrcode-lxjq" style="display: none">
+        <div class="qrcode-lxjq">
             <p style="background:#fff;padding-top:0;padding-bottom:5px">关注公众号<br>更多好礼相送</p>
         </div>
     </li>
     <li class="to-top" style="display: list-item;">
-        <p>TOP</p>
+        <a href="#top" target="_self" style="display: block"><p>TOP</p></a>
+
     </li>
 </ul>
 
@@ -790,6 +706,107 @@
             prevEl: '.swiper-button-prev'
         }
     })
+
+    /*
+    * url:/shop
+    * type:get
+    *
+    * id: 1
+    * name: shouji
+    *
+    * 返回值的
+    * {code:1,data[{}]}
+    *
+    * */
+
+/*    $.ajax({
+        url: '/shop',
+        type: 'get',
+        data: {
+            id: 1
+        },
+        success: function (result) {
+            if(result.code == 1) {
+                var data = result.data;
+                for(var i=0;i<data.length;i++) {
+                    var str = '';
+                    for(var j=0;j<data[i].childList.length;j++) {
+                        str += '<li class="sd"><a href=""><img src="'+ data[i].childList[j].imgUrl + '" alt="">'+ data[i].childList[j].name + '</a><span>估价</span></li>';
+                    }
+                    str+= '<a class="show-more" href="/phone">更多&gt;</a>'
+                    $('#mright ul').eq(i).html(str);
+                }
+            }else{
+                alert('报错了，不符合查询不到')
+            }
+        }
+    })*/
+/*调取手机tab数据*/
+    $.ajax({
+        url:'/shop',
+        type:'get',
+        data:{
+        },
+        success:function (result) {
+            var data = result.data;
+            if(result.code === 1){
+                for(var i = 0;i<data.length;i++){
+                    var str = '';
+                    for(var j = 0;j<data[i].childList.length;j++){
+                        str += '<li class="sd"><a href=""><img src="'+data[i].childList[j].imgUrl+'" alt="">'+ data[i].childList[j].name+'</a><span>估价</span></li>';
+                    }
+                    str += '<a class="show-more" href="/phone">更多&gt;</a>';
+                    $("#mright>ul").eq(i).html(str);
+                }
+            }else{
+                alert("查询不到");
+            }
+        }
+    })
+/*调取设备回收tab数据*/
+    $.ajax({
+        url:'/device',
+        type:'get',
+        data:{},
+        success:function (res){
+            if(res.code == 1){
+                var data = res.data;
+                for(var i =0;i<data.length;i++){
+                    var str = '';
+                    for(var j = 0;j<data[i].childList.length;j++){
+                        str += '<li><a href=""><img src="'+data[i].childList[j].imgUrl+'" alt=""><h5>'+data[i].childList[j].name+'</h5><p>最高回收价</p><div class="price">￥'+data[i].childList[j].price+'</div></a></li>';
+                    }
+                    $('.shebei-content').eq(i).find('.right').html(str);
+                }
+            }else{
+                alert("获取失败");
+            }
+        }
+    })
+ /*   $.ajax({
+        url: '/device',
+        type: 'get',
+        data: {},
+        success: function (result) {
+            if(result.code == 1) {
+                var data = result.data;
+                for(var i=0;i<data.length;i++) {
+                    var str = '';
+                    for(var j=0;j<data[i].childList.length;j++) {
+                        str += '<li><a href=""><img src="/static/img/iphone6.png" alt="">';
+                        str += '<h5>' + data[i].childList[j].name + '</h5>';
+                        str += '<p>最高回收价</p>';
+                        str += '<div class="price">￥' + data[i].childList[j].price + '</div>';
+                        str += '</a></li>';
+                    }
+                    $('.shebei-content').eq(i).find('.right').html(str);
+                }
+            }else{
+                alert('报错了，不符合查询不到')
+            }
+        }
+    })*/
 </script>
+<script src="/static/js/index.js"></script>
 </body>
 </html>
