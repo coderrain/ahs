@@ -781,6 +781,11 @@
             }else{
                 alert("获取失败");
             }
+        },
+        error:function(err){
+            console.log(err);
+            alert("请求接口失败");
+
         }
     })
  /*   $.ajax({
