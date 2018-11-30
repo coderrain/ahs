@@ -41,11 +41,9 @@
 ## http是无状态的
 
 ## session
-后台hi产生一个sessionid
-session 写入到内存中，在把sessionid写入到cookie传递给前端
+- 后台hi产生一个sessionid
+ - session 写入到内存中，在把sessionid写入到cookie传递给前端
 当你访问每个页面的时候都会从cookie里拿这个sessionid去和内存里面的作对比，如果一样就是一个用户
-
-
 
 ## 跨域
 
@@ -66,39 +64,35 @@ a.baidu.com
 
 b.baidu.com
 
-跨域
- jsonp script引入然后加一个callback方法
- script可以引入不同域名下文件
- <script src="baidu.com/a.html?callback=abc>
+## 跨域
+ - jsonp script引入然后加一个callback方法
+ - script可以引入不同域名下文件
+ - \<script src="baidu.com/a.html?callback=abc></script>
+ - abc({code:1,msg:'sucess'})
+ - function abc(data) {}
+ - cors 操作都在后台： 后台改变请求头
  
- abc({code:1,msg:'sucess'})
- 
- function abc(data) {}
- 
- cors 操作都在后台： 后台改变请求头
- 
- 
- 
- ## 做的功能
- - user 
+
+## 做的功能
+- user 
     - 登录
     - 注册
     - 退出
     - 修改密码
     - 展示信息
- - search
+- search
     - 完全匹配名字才能搜索到，以后加入模糊查询
- - shop
+- shop
     - 侧边栏
- - banner
+- banner
     - 轮播图效果
- - shop2
+- shop2
     - 切换效果
- - news
+- news
     - 新闻列表
     - 新闻页
     -热点新闻
- - link
+- link
     - 合作伙伴
     
     
