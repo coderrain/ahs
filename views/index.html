@@ -503,7 +503,7 @@
         <ul class="left">
             {% for  val in news %}
                 {% if val.id <4 %}
-                <li><a href=""><h4>{{ val.title }}</h4><p>{{ val.content }}</p></a></li>
+                <li><a href="/art/{{val.id}}"><h4>{{ val.title }}</h4><p>{{ val.content }}</p></a></li>
                 {% endif %}
             {% endfor %}
             <!--<li>
@@ -533,10 +533,10 @@
             <ul>
                 {% for  val in news %}
                 {% if val.id <4 %}
-                <li><a href=""><b class="black">{{ val.id }}</b>{{ val.title }}</a> </li>
+                <li><a href="/art/{{val.id}}"><b class="black">{{ val.id }}</b>{{ val.title }}</a> </li>
                 {% endif %}
                 {% if val.id >4 %}
-                <li><a href=""><b>{{ val.id }}</b>{{ val.title }}</a> </li>
+                <li><a href="/art/{{val.id}}"><b>{{ val.id }}</b>{{ val.title }}</a> </li>
                 {% endif %}
                 {% endfor %}
                 <!--<li><a href=""><b class="black">1</b>回收宝开创手机回收新标准——手机检测可视化</a> </li>

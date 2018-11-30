@@ -620,6 +620,24 @@ router.get('/device', function(req, res, next){
 })
 
 
+
+router.get('/art/:id', function(req, res, next){
+    var id = req.params.id;
+    var news = fs.readFileSync('./mock/news.json', 'utf-8');
+    var data = JSON.parse(news);
+    var result = null;
+    for(var i=0;i<data.length;i++) {
+        if(data[i].id == id) {
+            result = data[i];
+        }
+    }
+    console.log(typeof news)
+    res.render('art', {
+        data: result
+    })
+})
+
+
 router.get('/jsonpDemo', function(req, res, next){
     var callback = req.query.callback;
     res.send(callback + '({code:1, msg: "sucess"})')

@@ -10,6 +10,15 @@ router.get('/login', function (req, res, next) {
     })
 })
 
+
+router.get('/logut', function(req, res, next){
+    delete req.session.userInfo;
+    res.json({
+        code: 1,
+        msg: '退出成功'
+    })
+})
+
 router.get('/reg', function (req, res, next) {
     console.log(req.query);
     //res.send('这是第一个页面');
