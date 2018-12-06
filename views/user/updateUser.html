@@ -3,36 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .dl{
+            width: 100%;
+            height: 770px;
+            background: url("/static/img/banner-login.jpg") no-repeat center top 100%;
+            overflow: hidden;
+        }
+        .container{
+            width: 880px;
+            height: 480px;
+            background: url("/static/img/banner01.jpg") no-repeat center 36px #ffffff;
+            margin: 100px auto 0;
+            line-height: 42px;
+        }
+        .xinxi{
+            width: 347px;
+            margin: 0 auto;
+            padding-top: 187px;
+            color: #666666;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-<div class="common-header-1">
-    <div class="dw">
-        <span><a href="">服务条款</a></span>
-        <span><a href="">关于我们</a></span>
-        <span><a href="/user/userinfo">用户中心</a></span>
-        {% if userInfo.username %}
-        <div class="denglu">欢迎您{{ userInfo.username }}</div>
-        {% else %}
-        <span><a href="/user/reg">注册</a></span>
-        <span><a href="/user/login"  class="fontY">登录</a></span>
-        {% endif %}
+<div class="dl">
+    <div class="container">
+        <div class="xinxi">
+            <form action="/user/updateUser" method="post">
+                姓名：<input type="text" value="{{ userInfo.username }}" name="username"> <br>
+                性别：
+                {% if userInfo.sex == 1 %}
+                <input type="radio" name="sex" value="1" checked>男
+                <input type="radio" name="sex" value="2">女
+                {% else %}
+                <input type="radio" name="sex" value="1">男
+                <input type="radio" name="sex" value="2" checked>女
+                {% endif %} <br>
+                密码：<input type="password" name="password" value="{{ userInfo.password }}"><br>
+                <input type="submit" value="提交">
+            </form>
+        </div>
     </div>
-    <div class="banner">
-    </div>
-
 </div>
-<form action="/user/updateUser" method="post">
-    姓名：<input type="text" value="{{ userInfo.username }}" name="username"> <br>
-    性别：
-    {% if userInfo.sex == 1 %}
-    <input type="radio" name="sex" value="1" checked>男
-    <input type="radio" name="sex" value="2">女
-    {% else %}
-    <input type="radio" name="sex" value="1">男
-    <input type="radio" name="sex" value="2" checked>女
-    {% endif %} <br>
-    密码：<input type="password" name="password" value="{{ userInfo.password }}">
-    <input type="submit" value="修改密码">
-</form>
+
 </body>
 </html>

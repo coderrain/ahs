@@ -17,7 +17,7 @@
         <span><a href="">关于我们</a></span>
         <span><a href="/user/userinfo">用户中心</a></span>
         {% if userInfo.username %}
-        <div class="denglu">欢迎您！{{ userInfo.username }}</div>
+        <div class="denglu">欢迎您！{{ userInfo.username }} <button class="logut">退出登录</button></div>
         {% else %}
         <span><a href="/user/reg">注册</a></span>
         <span><a href="/user/login"  class="fontY">登录</a></span>
@@ -27,7 +27,7 @@
     <div class="banner">
         <div class="search">
             <form action="/search" method="get">
-                <input type="text" name="artitle" placeholder="请输入要搜索的机型" class="wenben">
+                <input type="text" name="artitle" placeholder="请输入要搜索的文章" class="wenben">
                 <button class="search-btn"></button>
                 <!--<input type="submit" class="search-btn">-->
             </form>
@@ -441,8 +441,12 @@
             <strong>专业、便捷、高效 </strong>
         </div>
         <div class="right">
-            <div class="video"></div>
-            <div class="play"></div>
+            <div class="video">
+                <video width="582" height="328" controls="controls" poster="/static/img/jiance01.png" id="video">
+                    <source src="/static/img/pc_video_13.mp4">
+                </video>
+            </div>
+            <div class="play" id="play"></div>
         </div>
     </div>
     <!--专业检测-->
@@ -503,7 +507,7 @@
         <ul class="left">
             {% for  val in news %}
                 {% if val.id <4 %}
-                <li><a href="/art/{{val.id}}"><h4>{{ val.title }}</h4><p>{{ val.content }}</p></a></li>
+                <li><a href="/art/{{val.id}}" style="background:url('{{ val.background }}')no-repeat white"><h4>{{ val.title }}</h4><p>{{ val.content }}</p></a></li>
                 {% endif %}
             {% endfor %}
             <!--<li>
@@ -583,9 +587,9 @@
     <div class="w1200">
         <ul>
             <li><img src="/static/img/bottom01.png" alt="">专业</li>
-            <li><img src="/static/img/bottom01.png" alt="">专业</li>
-            <li><img src="/static/img/bottom01.png" alt="">专业</li>
-            <li><img src="/static/img/bottom01.png" alt="">专业</li>
+            <li><img src="/static/img/bottom02.png" alt="">安全</li>
+            <li><img src="/static/img/bottom03.png" alt="">高价</li>
+            <li><img src="/static/img/bottom04.png" alt="">便捷</li>
         </ul>
     </div>
 </div>

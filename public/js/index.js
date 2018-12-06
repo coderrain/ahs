@@ -77,3 +77,28 @@ $('#shebei>li').each(function (index,item) {
         $('.shebei-container .shebei-content').eq(index).siblings('div').removeClass("active");
     });
 });
+//退出登录
+$('.logut').click(function () {
+    $.ajax({
+        url:"/user/logut",
+        type:"get",
+        data:{},
+        success:function (res) {
+            if(res.code==1){
+                alert("退出成功")
+                window.location.href='/';
+            }else{
+                alert('退出失败')
+            }
+        }
+    })
+})
+//video播放
+$('#play').click(function () {
+    if($('#video')[0].paused){
+        $('#video')[0].play()
+    }else{
+        $('#video')[0].pause();
+    }
+    $(this).hide()
+})

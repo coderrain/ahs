@@ -1,22 +1,25 @@
 [{
   "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
-},{
-  "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
-},{
-  "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
+  "url": "/static/img/6_1_1.png"
 },{
   "title": "微信",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_2.png"
+  "url": "/static/img/6_2_1.png"
+},{
+  "title": "芝麻",
+  "url": "/static/img/6_3_1.png"
+},{
+  "title": "闲鱼",
+  "url": "/static/img/6_4_1.png"
+},{
+  "title": "芝麻",
+  "url": "/static/img/6_3_1.png"
 },{
   "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
+  "url": "/static/img/6_1_1.png"
 },{
-  "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
+  "title": "闲鱼",
+  "url": "/static/img/6_4_1.png"
 },{
-  "title": "天猫",
-  "url": "//s1.huishoubao.com/static/pc/1001/img/6_1.png"
+  "title": "微信",
+  "url": "/static/img/6_2_1.png"
 }]
